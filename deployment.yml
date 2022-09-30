@@ -25,9 +25,9 @@ kind: Service
 metadata:
   name: petclinic
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: petclinic
   ports:
-    - port: 8082
+    - port: 8080
       targetPort: 8080
