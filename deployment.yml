@@ -29,5 +29,5 @@ spec:
   selector:
     app: petclinic
   ports:
-    - port: 80
+    - port: 8082
       targetPort: 8080
