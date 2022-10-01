@@ -1,6 +1,6 @@
 pipeline {
     agent { 
-        label 'no-no-no-build-never-ner-ner'
+        label 'master'
          }
 
     stages {
@@ -29,7 +29,7 @@ pipeline {
                 sh '''
         DATE=`date '+%F'`
         BUCKET_NAME=ekteck-jenkins-backup
-        docker run -i -v $PWD:/backup -w /backup devopseasylearning2021/canary:jenkins-backup \
+        docker run -i -v $PWD:/backup -w /kantin10/jenkins-backup-image \
          bash -c "pwd ; \
          ls -l ; \
          aws s3 cp "JENKINS-BACKUP-${DATE}"  s3://$BUCKET_NAME/  --recursive "
