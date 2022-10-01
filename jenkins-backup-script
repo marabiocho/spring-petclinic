@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sh '''
         DATE=`date '+%F'`
-        BUCKET_NAME=ekteck-jenkins-backup
+        BUCKET_NAME=jenkins-backup-bucket-tongue
         docker run -i -v $PWD:/backup -w /kantin10/jenkins-backup-image \
          bash -c "pwd ; \
          ls -l ; \
